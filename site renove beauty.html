@@ -246,5 +246,36 @@
 
         <section>
             <h2>Agende Sua Consulta</h2>
-            <form action="#" method="post">
+            <form id="contact-form">
                 <input type="text" name="nome" placeholder="Seu Nome" required>
+                <input type="email" name="email" placeholder="Seu E-mail" required>
+                <textarea name="mensagem" placeholder="Sua Mensagem" rows="4" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Renove Beauty. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        // Validação do formulário
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Evita o envio padrão do formulário
+
+            const nome = this.nome.value.trim();
+            const email = this.email.value.trim();
+            const mensagem = this.mensagem.value.trim();
+
+            if (nome === '' || email === '' || mensagem === '') {
+                alert('Por favor, preencha todos os campos.');
+                return;
+            }
+
+            alert('Mensagem enviada com sucesso!');
+            this.reset(); // Limpa o formulário após o envio
+        });
+    </script>
+</body>
+</html>
