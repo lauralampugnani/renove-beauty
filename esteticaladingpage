@@ -265,14 +265,4 @@
             const email = this.email.value.trim();
             const mensagem = this.mensagem.value.trim();
 
-            if (nome === '' || email === '' || mensagem === '') {
-                alert('Por favor, preencha todos os campos.');
-                return;
-            }
-
-            alert('Mensagem enviada com sucesso!');
-            this.reset();
-        });
-    </script>
-</body>
-</html>
+            if (nome === '' || email === '' || mensagem === '')
