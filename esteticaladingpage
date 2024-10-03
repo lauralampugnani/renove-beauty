@@ -213,9 +213,7 @@
         <section>
             <h2>Sobre Nós</h2>
             <p>Na Renove Beauty, acreditamos que a beleza vai além da aparência; é uma expressão de bem-estar, confiança e autenticidade. Nossa missão é proporcionar uma experiência transformadora, onde cada cliente se sente valorizado e especial.</p>
-            <p>Com uma equipe de profissionais altamente qualificados e apaixonados pelo que fazem, oferecemos tratamentos personalizados que combinam o melhor da tecnologia estética com um toque humano. Desde tratamentos faciais revitalizantes até massagens corporais relaxantes, cada detalhe é cuidadosamente pensado para garantir resultados visíveis e duradouros.</p>
-            <p>Nosso compromisso é com a excelência, utilizando apenas produtos de alta qualidade e técnicas avançadas para realçar a beleza natural de cada pessoa. Acreditamos que todos merecem se sentir bem consigo mesmos, e estamos aqui para ajudar você a alcançar seu melhor eu.</p>
-            <p>Seja qual for o seu objetivo de beleza, na Renove Beauty, você encontrará um ambiente acolhedor e uma equipe dedicada a cuidar de você com carinho e profissionalismo. Venha nos visitar e descubra como podemos ajudá-lo(a) a renovar sua beleza e autoestima.</p>
+            <p>Com uma equipe de profissionais altamente qualificados e apaixonados pelo que fazem, oferecemos tratamentos personalizados que combinam o melhor da tecnologia estética com um toque humano...</p>
         </section>
 
         <section class="service">
@@ -223,15 +221,15 @@
             <ul>
                 <li>
                     <h3>Tratamento Facial</h3>
-                    <img src="images/tratamento-facial.jpg" alt="Tratamento Facial">
+                    <img src="assets/images/tratamento-facial.jpg" alt="Tratamento Facial">
                 </li>
                 <li>
                     <h3>Massagem Corporal</h3>
-                    <img src="images/massagem-corporal.jpg" alt="Massagem Corporal">
+                    <img src="assets/images/massagem-corporal.jpg" alt="Massagem Corporal">
                 </li>
                 <li>
                     <h3>Depilação a Laser</h3>
-                    <img src="images/depilacao-laser.jpg" alt="Depilação a Laser">
+                    <img src="assets/images/depilacao-laser.jpg" alt="Depilação a Laser">
                 </li>
             </ul>
         </section>
@@ -265,4 +263,14 @@
             const email = this.email.value.trim();
             const mensagem = this.mensagem.value.trim();
 
-            if (nome === '' || email === '' || mensagem === '')
+            if (nome === '' || email === '' || mensagem === '') {
+                alert('Por favor, preencha todos os campos.');
+                return;
+            }
+
+            alert('Mensagem enviada com sucesso!');
+            // Aqui você pode adicionar a lógica para enviar os dados para um servidor
+        });
+    </script>
+</body>
+</html>
